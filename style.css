@@ -6,9 +6,17 @@ body{
 }
 
 a{
-  text-decoration: none;
   color: initial;
   font-family: inherit;
+}
+
+.name{
+  font-weight: 600;
+  font-size: x-large;
+}
+
+.bold{
+  font-weight: 600;
 }
 
 .wrapper{
@@ -114,24 +122,24 @@ td {
     border-radius: 10px;
     height: 5px;
     overflow: hidden;
-  }
-  
+}
 
-  .progress-bar::after {
+.progress-bar::after {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
-    width: 0;
+    width: var(--progress-width, 0); 
     background: linear-gradient(to right, #71e694da, #949ef8de);
     transition: width 1s ease-in-out;
     border-radius: 10px;
-  }
+}
 
- /* Soft Skills Container */
+
+
 .soft-skills {
-  max-width: 25rem; /* Scalable width */
+  max-width: 25rem;
   margin: 2rem 0;
   padding: 1.5rem;
   background: linear-gradient(135deg, #71e694da, #949ef8de);
@@ -141,28 +149,28 @@ td {
   text-align: center;
 }
 
-/* Title Styling */
+
 .soft-skills h2 {
   color: #5f5fc9;
-  font-size: 1.5rem; /* Scalable font size */
+  font-size: 1.5rem; 
   margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
 }
 
-/* Skill List Container */
+
 .soft-skills ul {
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-/* Individual Skill Item */
+
 .soft-skill-list {
   list-style-type: none;
-  font-size: 1.125rem; /* Scalable font size */
+  font-size: 1.125rem; 
   margin: 0.625rem 0;
-  padding: 0.625rem 1rem; /* Responsive padding */
+  padding: 0.625rem 1rem; 
   background-color: #ffffff;
   border-radius: 0.625rem;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
@@ -170,21 +178,56 @@ td {
   cursor: pointer;
 }
 
-/* Hover Effect */
+
 .soft-skill-list:hover {
-  transform: translateY(-0.25rem); /* Scalable hover effect */
+  transform: translateY(-0.25rem); 
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
 }
 
-/* Icons for Skills */
+
 .soft-skill-list::before {
   content: "✔️ ";
   color: #4caf50;
-  font-size: 1rem; /* Scalable icon size */
+  font-size: 1rem; 
   margin-right: 0.625rem;
 }
 
-/* Experience Section Styling */
+.family-friends-section {
+  max-width: 40rem;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #f9f9f9;
+  border-radius: 1rem;
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.family-friends-section h2 {
+  font-size: 1.5rem;
+  color: #4caf50;
+  margin-bottom: 1.5rem;
+}
+
+.family-friends-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.family-friends-gallery img {
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.family-friends-gallery img:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+
+
 .experience-section {
   max-width: 40rem;
   margin: 2rem auto;
@@ -196,7 +239,7 @@ td {
   line-height: 1.6;
 }
 
-/* Title */
+
 .experience-section h2 {
   font-size: 1.75rem;
   color: #5f5fc9;
@@ -206,7 +249,7 @@ td {
   letter-spacing: 0.1rem;
 }
 
-/* Individual Experience Item */
+
 .experience {
   margin-bottom: 2rem;
   padding: 1rem;
@@ -245,7 +288,7 @@ td {
 }
 
 
-/* General Section Styling */
+
 section {
   max-width: 40rem;
   margin: 2rem auto;
@@ -256,7 +299,7 @@ section {
   font-family: Arial, sans-serif;
 }
 
-/* Section Titles */
+
 section h2 {
   font-size: 1.75rem;
   color: #5f5fc9;
@@ -266,7 +309,7 @@ section h2 {
   letter-spacing: 0.1rem;
 }
 
-/* Education Section */
+
 .education-section .education {
   margin-bottom: 2rem;
   padding: 1rem;
@@ -300,7 +343,7 @@ section h2 {
   margin-top: 0.5rem;
 }
 
-/* Portfolio Section */
+
 .portfolio-section .portfolio {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -338,7 +381,7 @@ section h2 {
   color: #757575;
 }
 
-/* Contact Section */
+
 .contact-section {
   max-width: 30rem;
   margin: 2rem auto;
@@ -402,7 +445,7 @@ section h2 {
   background: #45a049;
 }
 
-/* Footer */
+
 .footer {
   margin-top: 2rem;
   padding: 1.5rem;
@@ -435,7 +478,7 @@ section h2 {
 
 /* Mobile First Approach */
 
-/* General Styles for Small Screens */
+
 @media (max-width: 600px) {
   .wrapper {
     flex-direction: column;
